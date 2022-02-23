@@ -1,0 +1,30 @@
+<div class="container margin">
+    <a class="margin" routerLink='/amministrazione'  >amministrazione</a >
+
+        <!-- NUOVA CATEGORIA -->
+        <h2>Crea una nuova categoria</h2>
+        <div class=" text-center m-3">
+            <h1 class="my-3">CREA UNA NUOVA CATEGORIA</h1>
+    
+            <form action="" method="post" [formGroup]="CreaCat" (ngSubmit)="catservice.newCat(CreaCat)">
+                <input class="rounded px-2" type="text" formControlName="nome" placeholder="nome categoria" id="nomeCategoria">
+                <button type="submit" class="log-reg-btn px-3" >Vai</button>
+            </form>
+        </div>
+
+
+        <!-- MODIFICA CATEGORIA -->
+
+        <h1 class="text-center my-3">Modifica Categoria</h1>
+        <div class="text-center my-3">
+        
+            <form action="" [formGroup]="modificaCat" (ngSubmit)="conferma()">
+                <select class="rounded px-2" formControlName="id"  name="categoria" id="categoria">
+                    <option *ngFor="let cat of myCategorie"  value="{{cat._id}}">{{cat.nome}}</option> 
+                </select>
+                <input class="rounded px-2" type="text" formControlName="modnome" id="nome">
+                <button type="submit" class="log-reg-btn px-3" >Modifica</button>
+            </form>
+
+    </div>
+</div>

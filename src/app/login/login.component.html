@@ -1,0 +1,19 @@
+<div class="container-fluid reg-height flex-column d-flex align-items-center justify-content-center  ">
+    <div class="reg-height-box my-ombra flex-column d-flex align-items-center justify-content-center py-3">
+        <div class="text-center my">
+            <h4>Entra Nel Nostro Sito</h4>
+            <img class="img-reg" src="img/logo.png" alt="">
+        </div>
+        <form method="GET" [formGroup]="loginform" (ngSubmit)="login()" class="d-flex flex-column justify-content-center align-items-center w-100  my-4">
+            <input class="my-1 mx-1 my-form-text" type="email" name="email" formControlName="email" id="email-log" placeholder="email@mail.com">
+            <input class="my-1 mx-1 my-form-text" type="password" name="pass" formControlName="password" id="password-log" placeholder="password">
+            <div class="text-end w-50">
+                <button class="log-reg-btn px-3 py-1 m-1"  type="submit" >login</button>
+            </div>
+        </form>
+
+        <div id="risultato-log"></div>
+
+    </div>
+
+</div>

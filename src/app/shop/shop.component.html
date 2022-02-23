@@ -1,0 +1,28 @@
+        <!-- filtri per la ricerca -->
+        <div class="container shop-filtri">
+            <div class="row text-center align-items-center py-5">
+                    <h2>QUI CI METTERO I FILTRI "forse"</h2>
+            </div>
+        </div>
+
+        
+        <!-- i miei item -->
+        <div class="container my-3">
+            <h2>I NOSTRI PRODOTTI</h2>
+            <div class="row">
+                <div *ngFor="let prodotto of prodotti" class="col-10 mx-auto mx-sm-0 col-sm-6 col-md-4 col-lg-3">
+                    <div class="d-flex flex-wrap flex-column  shop-box my-ombra m-3">
+                        <div class=" item-shop-title text-center">{{prodotto.titolo}}</div>
+                        <div class=" item-shop-box-img d-flex align-items-center">
+                            <img class="item-shop-img" src="../../assets/img/{{prodotto.img}}" alt="">
+                            <div></div>
+                        </div>
+                        <div class="box-venti">
+                            <div class="item-shop-prezzo text-end">{{prodotto.prezzo}}</div>
+                            <div class="item-shop-btn text-center">Aggiungi Al Carrello</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 

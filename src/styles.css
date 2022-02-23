@@ -1,1 +1,254 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css" ;
+
+*{
+    font-family: 'Source Serif 4', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.my-ombra{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* css navbar */
+.my-margin-nav{
+    margin-bottom: 70px;
+}
+.my-nav{
+    background-color: rgb(42, 2, 42);
+    color: white;
+    height: 70px;
+    width: 100%;
+    position:fixed;
+    top: 0px;
+    z-index: 3;
+}
+
+.my-logo{
+    background-image: url("assets/img/logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter:  invert(100%);
+    height: 98%;
+    
+}
+
+.log-reg-btn{
+   
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    padding: 3px;
+    border-radius: 20px;
+    background: rgb(255,244,0);
+    background: linear-gradient(90deg, rgba(255,244,0,0.6895133053221288) 0%, rgba(198,127,67,0.69) 50%, rgba(48,8,207,0.69) 100%);
+    transition: 300ms linear;
+}
+
+.log-reg-btn:hover{
+    font-size: 20px;
+    transition: 300ms linear;
+    color: white;
+}
+
+.list-nav-drop{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    transition: 300ms linear;
+}
+
+.list-nav-drop:hover{
+    font-size: 20px;
+    color: rgb(209, 209, 7);
+    transition: 300ms linear;
+}
+
+.my-drop{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 20px;
+}
+
+.list-nav{
+   
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    transition: 300ms linear;
+}
+
+.list-nav:hover{
+    font-size: 20px;
+    color: yellow;
+    transition: 300ms linear;
+}
+
+/* css jumbo */
+.my-jumbo{
+    width: 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+}
+.img-car{
+    max-height: 576px;
+    width: 100%;
+}
+
+/*css box-head */
+
+.box-head{
+    height: 150px;
+    max-height: 250px;
+    width: 100%;
+    background: rgb(255,244,0);
+    background: linear-gradient(90deg, rgba(255,244,0,0.6895133053221288) 0%, rgba(198,127,67,0.69) 50%, rgba(48,8,207,0.69) 100%);
+    border-radius: 10px;
+    transition: 500ms linear;
+}
+.box-head:hover{
+    transform: translateY(-10px);
+    transition: 500ms linear;
+}
+
+.box-head-img{
+    max-height: 240px;
+    width: 100%;
+}
+
+/* inizio Main */
+
+/* item shop */
+
+.item-shop{
+    height: 450px;
+    width: 22%;
+}
+
+.item-shop-box-img{
+    width: 100%;
+    height: 70%;
+}
+.item-shop-img{
+    width: 100%;
+    max-height: 383px;
+}
+
+.item-shop-title{
+    height: 10%;
+    padding-top: 5px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.item-shop-btn{
+    
+    font-weight: bolder;
+    color: black;
+    padding: 3px;
+    border-radius: 20px;
+    background: rgb(255,244,0);
+    background: linear-gradient(90deg, rgba(255,244,0,0.6895133053221288) 0%, rgba(198,127,67,0.69) 50%, rgba(48,8,207,0.69) 100%);
+    transition: 300ms linear;
+}
+
+.item-shop-btn:hover{
+    font-size: 18px;
+    transition: 300ms linear;
+}
+
+.item-shop-prezzo{
+    padding-top: 5px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.box-venti{
+    height: 20%;
+}
+
+/* registrazione */
+
+.reg-height{
+    height: calc(100vh - 70px);
+    background-color: gainsboro;
+}
+.reg-height-box{
+    width: 50%;
+    background-color: white;
+}
+
+
+.my-form-text{
+    border-radius: 7px;
+    padding: 3px 10px ;
+    margin: 600px;
+    width: 45%;
+}
+
+.img-reg{
+    width: 10%;
+}
+
+
+
+
+
+/* css  shop */
+
+.shop-filtri{
+    height: 200px;
+    width: 100%;
+    background-color: gray;
+}
+
+.shop-box{
+    height:  450px;
+    width: 100%;
+}
+
+
+
+
+
+/* css chi siamo */
+
+
+
+.chisiamo-img-big{
+    width: 100%;
+
+}
+
+
+/* admin */
+
+.pop-up{
+    position: fixed;
+    z-index: 1;
+    height: 350px;
+    width: 500px;
+    background-color: white;
+    top: calc(50% - 150px );
+    right:calc(50% - 250px);
+}
+
+.close{
+    font-weight: bolder;
+    background-color: white;
+    transition:500ms;
+    border: 0px;
+    
+}
+
+.close:hover{
+    background-color: red;
+    font-weight: bolder;
+    color: white;
+}

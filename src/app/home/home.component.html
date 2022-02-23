@@ -1,0 +1,106 @@
+     <!-- jumbotron -->
+     <div class=" my-jumbo"> 
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../../assets/img/jumbo1.jpg" class="d-block img-car" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/img/jumbo2.jpg" class="d-block img-car" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/img/jumbo3.jpg" class="d-block img-car" alt="...">
+              </div>
+            </div>
+          </div>
+     
+</div>
+<!-- box-head -->
+<div class="container d-flex justify-content-around flex-wrap">
+ <div class="row d-flex justify-content-around flex-wrap">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="d-flex justify-content-evenly align-items-center box-head my-4 my-ombra">
+                   <div class="row d-flex align-items-center">
+                       <div class="col-6">
+                           <img class="box-head-img" src="../../assets/img/monitor.png" alt="">
+                       </div>
+                       <div class="col-6">
+                           <div class="box-head-text">
+                               <h3>Monitor <br>Gaming</h3>
+                           </div>
+
+                       </div>
+                   </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="d-flex justify-content-evenly align-items-center box-head my-4 my-ombra">
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        <img class="box-head-img" src="../../assets/img/mouse.png" alt="">
+                    </div>
+                    <div class="col-6">
+                        <div class="box-head-text">
+                            <h3>Mouse <br>Gaming</h3>
+                        </div>
+
+                    </div>
+                </div>
+         </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="d-flex justify-content-evenly align-items-center box-head my-4 my-ombra">
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        <img class="box-head-img" src="../../assets/img/case.png" alt="">
+                    </div>
+                    <div class="col-6">
+                        <div class="box-head-text">
+                            <h3>Case <br>Gaming</h3>
+                        </div>
+
+                    </div>
+                </div>
+         </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="d-flex justify-content-evenly align-items-center box-head my-4 my-ombra">
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        <img class="box-head-img" src="../../assets/img/keybord.png" alt="">
+                    </div>
+                    <div class="col-6">
+                        <div class="box-head-text">
+                            <h3>keybord <br>Gaming</h3>
+                        </div>
+
+                    </div>
+                </div>
+         </div>
+        </div>
+ </div>
+
+</div>
+
+<main>
+    <div class="container my-3">
+        <h2>PRODOTTI IN EVIDENZA</h2>
+        <div class="row">
+            <div *ngFor="let prodotto of prodotti" class="col-10 mx-auto mx-sm-0 col-sm-6 col-md-4 col-lg-3">
+                <div class="d-flex flex-wrap flex-column  shop-box my-ombra m-3">
+                    <div class=" item-shop-title text-center">{{prodotto.titolo}}</div>
+                    <div class=" item-shop-box-img d-flex align-items-center">
+                        <img class="item-shop-img" src="../../assets/img/{{prodotto.img}}" alt="">
+                        <div></div>
+                    </div>
+                    <div class="box-venti">
+                        <div class="item-shop-prezzo text-end">{{prodotto.prezzo}}</div>
+                        <div class="item-shop-btn text-center">Aggiungi Al Carrello</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

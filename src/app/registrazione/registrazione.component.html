@@ -1,0 +1,60 @@
+<div class="container-fluid flex-column d-flex align-items-center  m-auto  reg-height">
+    <div class="flex-column d-flex align-items-center  m-auto  reg-height-box my-ombra">
+
+        <div class="text-center">
+            <h4>Iscriviti Al Nostro Sito</h4>
+            <img class="img-reg" src="img/logo.png" alt="">
+        </div>
+           
+        <form [formGroup]="mioform" (ngSubmit)="onSubmit()" class="d-flex flex-column justify-content-start  my-4" name="iscrizione" method="POST"    >
+            <div class="d-flex w-100">
+                <input class="my-1 mx-2 my-form-text" type="text" maxlength="40" name="cognome" formControlName="ragionesociale"  placeholder="Cognome e Nome o Nome Azienda">
+                 <select class="my-1 mx-2 my-form-text" name="tipologia" formControlName="tipologia" >
+                    <option value="" selected disabled>seleziona un opzione</option>
+                    <option value="Privato">Privato</option>
+                    <option value="Azienda">Azienda</option>
+                </select>
+            </div>
+            <div class="d-flex w-100">
+                <input class="my-1 mx-2 my-form-text" type="text"  name="partitaiva" placeholder="PartitaIva" formControlName="partitaiva">
+                <input class="my-1 mx-2 my-form-text" type="text"  name="codicefisc" placeholder="Codice Fiscale" formControlName="codicefiscale">
+            </div>
+
+            <div class="d-flex w-100">
+                <input class="my-1 mx-2 my-form-text" type="text"  name="nazione" placeholder="Nazione" formControlName="nazione">
+                <input class="my-1 mx-2 my-form-text" type="text"  name="via" placeholder="Via" formControlName="via">
+            </div>
+            <div class="d-flex w-100">
+                <input class="my-1 mx-2 my-form-text" type="text"  name="cap" placeholder="CAP" formControlName="cap">
+                <input class="my-1 mx-2 my-form-text" type="text"  name="comune" placeholder="Comune" formControlName="comune">
+
+            </div>
+            <div class="d-flex w-100">
+                <input class="my-1 mx-2 my-form-text" type="text"  name="provincia" placeholder="Provincia" formControlName="provincia">
+
+                <input class="my-1 mx-2 my-form-text" type="text" name="telefonofiss" maxlength="15" placeholder="Telefono Fisso" formControlName="telefonofisso">
+            </div>
+            
+            <div class="d-flex w-100">
+                <input class="my-1 mx-2 my-form-text" type="text" name="cellulare" maxlength="15" placeholder="Cellulare" formControlName="cellulare">
+                <input class="my-1 mx-2 my-form-text" type="email" maxlength="30" name="email" placeholder="Email" formControlName="email">
+            </div>
+            
+            <div class="d-flex w-100">
+                <input class="my-1 mx-2 my-form-text" type="text" name="username"  placeholder="Username" formControlName="username">
+                <input class="my-1 mx-2 my-form-text" type="password" name="password" placeholder="Password" formControlName="password">
+            </div>
+
+            <div class="text-end">
+                <button type="submit"  class="log-reg-btn px-3 py-1 m-1">invia</button>
+                <button type="reset" class="log-reg-btn px-3 py-1 m-1">reset</button>
+            </div>
+            
+                </form>
+    </div>
+
+        
+        
+    
+
+</div>
