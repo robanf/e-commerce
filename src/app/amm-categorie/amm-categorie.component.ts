@@ -11,6 +11,7 @@ export class AmmCategorieComponent implements OnInit {
   CreaCat: FormGroup;
   modificaCat: FormGroup;
   myCategorie!: any ;
+  deleteCat: FormGroup;
 
   constructor(fb : FormBuilder, public catservice:CategorieService ) {
     this.CreaCat=fb.group({
@@ -19,6 +20,10 @@ export class AmmCategorieComponent implements OnInit {
     this.modificaCat=fb.group({
       id:[''],
       modnome:['', Validators.required ],
+    });
+    this.deleteCat=fb.group({
+      id:[''],
+      modnome:[''],
     });
 
     this.catservice.getCat()
@@ -36,6 +41,10 @@ export class AmmCategorieComponent implements OnInit {
 
   conferma(){
     this.catservice.modifyCat(this.modificaCat.value).subscribe((res)=>{})
+  }
+
+  cancella(){
+    this.catservice.deleteCat(this.deleteCat.value).subscribe((res)=>{})
   }
 
 }

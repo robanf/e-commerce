@@ -34,9 +34,14 @@ export class CategorieService{
         
     }
 
-    modifyCat(cat:any){
-        
+    modifyCat(cat:any){    
         return this._http.put(`${this.url}modifyCategoria`,cat)
         
+    }
+
+    deleteCat(cat:any){
+        console.log(cat);
+        
+        return this._http.delete(`${this.url}deleteCategoria/${cat.id}`)
     }
 }

@@ -1,1 +1,72 @@
-<a class="list-nav" routerLink='/amministrazione' >Amministrazione</a>
+<div class="container margin">
+    <a class="margin" routerLink='/amministrazione'  >amministrazione</a >
+
+        <!-- CREA NUOVO PRODOTTO -->
+        <h1 class="">CREA UN NUOVO PRODOTTO</h1>
+        <form class="d-flex flex-column align-items-start " [formGroup]="insProd" (ngSubmit)="inserisciProd()" action="" method="post">
+            <input class="my-2 rounded px-2" type="text" placeholder="Titolo" formControlName="nome" id="nome">
+            <input class="my-2 rounded" type="file" name="" id="img" formControlName="img">
+            <input class="my-2 rounded px-2" type="text" placeholder="Prezzo" formControlName="prezzo" id="prezzo">
+            <select class="my-2 rounded px-2" name="categoria" id="categoria" formControlName="categoria">
+                <option *ngFor="let cat of myCategorie"  value="{{cat._id}}">{{cat.nome}}</option> 
+            </select>
+            <textarea class="my-2 rounded px-2" name="" id="descrizione" maxlength="100" formControlName="descrizione"></textarea>
+            <button type="submit" class="log-reg-btn px-3" onclick="newProdotti()">vai</button>
+        </form>
+
+        <!-- elimina tutti i prodotti di una categoria -->
+        <h1>Elimina tutti i prodotti di una categoria</h1>
+        <form action="" [formGroup]="formProdDelete" (ngSubmit)="eliminAllaprod()">
+
+            <select formControlName="categoria" class="rounded px-2" name="categoria" id="categoria">
+                <option *ngFor="let cat of myCategorie"  value="{{cat._id}}">{{cat.nome}}</option> 
+            </select>
+            <button type="submit" class="log-reg-btn px-3">elimina</button>
+            
+        </form>
+
+
+        <!-- stampa prodotti -->
+        <h2>I NOSTRI PRODOTTI</h2>
+        <div class="row" id="prodotti">
+            
+            <div *ngFor="let prod of myProdotti" class="col-10 mx-auto mx-sm-0 col-sm-6 col-md-4 col-lg-3">
+                <div class="d-flex flex-wrap flex-column  shop-box my-ombra m-3">
+                    <input type="hidden" value="{{prod._id}}" id="prod">
+                    <div class=" item-shop-title text-center">{{prod.nome}}</div>
+                    <div class=" item-shop-box-img d-flex align-items-center">
+                        <img class="item-shop-img" src="../../assets/img/{{prod.img}}" alt="">
+                        <div></div>
+                    </div>
+                    <div class="box-venti">
+                        <div class="item-shop-prezzo text-end">{{prod.prezzo}}€</div>
+                        <div class="d-flex">
+                        <form action=""  (ngSubmit)="eliminaprod(prod._id)">
+                            <input type="hidden" value="{{prod._id}}" id="prod">
+                            <button class="item-shop-btn text-center" type="submit" >Elimina</button>
+
+                        </form>
+                        <button class="item-shop-btn text-center" type="button" (click)="attivaMod(prod._id)">Modifica</button>
+                        
+                        </div>
+
+                    </div>
+                </div>
+                <div *ngIf="attivo" class="pop-up my-ombra   border border-dark rounded" >
+                    <div class="text-end"><button class="close px-1 rounded" type="button" (click)="chiudimodifica()"><i class="fa-solid fa-x"></i></button></div>
+                    <form action="" [formGroup]="formProdMod" (ngSubmit)="modifyprod()" class="d-flex flex-column align-items-center justify-content-end">
+                       <input type="hidden" id="idProd"  formControlName="_id">
+                       <input class="my-2 w-50" type="hidden" id="imgBackup"  formControlName="img">
+                       <input class="my-2 w-50" type="text"   placeholder="Titolo" id="nome" formControlName="nome">
+
+                       <input class="my-2 w-50" type="text"  placeholder="Prezzo" id="prezzo" formControlName="prezzo">
+                       <select class="my-2 w-50" name="categoria" id="categoria" formControlName="categoria">
+                        <option *ngFor="let cat of myCategorie"  value="{{cat._id}}">{{cat.nome}}</option>
+                       </select>
+                       <textarea class="my-2 w-50" name="" formControlName="descrizione"  id="descrizione" maxlength="100"></textarea>
+                       <button type="submit" class="log-reg-btn my-2 px-3" >vai</button>
+                   </form>
+                </div>
+            </div>
+        </div>
+</div>

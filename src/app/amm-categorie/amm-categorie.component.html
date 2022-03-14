@@ -26,5 +26,17 @@
                 <button type="submit" class="log-reg-btn px-3" >Modifica</button>
             </form>
 
-    </div>
+        </div>
+
+        <!-- Cancella Categoria insieme ai prodotti -->
+        <h1 class="text-center my-3">Elimina categoria e prodotti all'interno</h1>
+        <div class="text-center">
+            <form action="delete" [formGroup]="deleteCat" (ngSubmit)="cancella()">
+                <select class="rounded px-2" formControlName="id" name="categoria" id="categoria">
+                    <option *ngFor="let cat of myCategorie"  value="{{cat._id}}">{{cat.nome}}</option> 
+                </select>
+                <button type="submit" class="log-reg-btn px-3" >elimina</button>
+
+            </form>
+        </div>
 </div>
